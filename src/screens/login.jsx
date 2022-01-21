@@ -6,7 +6,12 @@ function Login() {
   let Navigate = useNavigate();
   const [uid, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [passwordShown, setPasswordShown] = useState(false);
 
+  const togglePassword = () => {
+    
+    setPasswordShown(!passwordShown);
+  };
    const handleSubmit = async e => {
     e.preventDefault();
     let data = {
@@ -32,7 +37,7 @@ function Login() {
       }
 
     }catch(e){
-        alert(" Invalid username or password"+e);
+        alert(" Invalid username or password");
 
     }
     
@@ -64,7 +69,8 @@ function Login() {
         <br />
         <label>
           <p><span>*</span>Password</p>
-          <input type="text" onChange={e => setPassword(e.target.value)} />
+          <input type={passwordShown ? "text" : "password"} onChange={e => setPassword(e.target.value)} /><span  onClick={togglePassword}>show </span>
+      
         </label>
         
         <div >
