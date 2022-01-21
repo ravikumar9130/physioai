@@ -1,0 +1,32 @@
+.body{
+  z-index: 1;
+
+  background-color: rgb(8, 255, 160);
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.head{
+  font-weight: 600;
+  color: white;
+  font-family: 'Dongle', sans-serif !important;
+  font-size: 50px;
+}
+.btn{
+  background-color: white !important;
+  z-index: 11;
+  color :black;
+  padding:10px 25px;
+margin-top: 20px;
+
+}
+span{
+  color: red;
+}
+label{
+  padding-bottom: 20px;
+}
